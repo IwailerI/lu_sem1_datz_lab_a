@@ -1,0 +1,269 @@
+============================================================
+Group 1:
+Happy path, triangle exists, input is valid
+============================================================
+
+Test case: 101
+Input: 3 4 5
+Expected: VALID
+C++: VALID
+Python: VALID
+
+Test case: 102
+Input: 4 5 3
+Expected: VALID
+C++: VALID
+Python: VALID
+
+Test case: 103
+Input: 5 3 4
+Expected: VALID
+C++: VALID
+Python: VALID
+
+Test case: 104
+Input: 30 40 50
+Expected: VALID
+C++: VALID
+Python: VALID
+
+Test case: 105
+Input: 40 50 30
+Expected: VALID
+C++: VALID
+Python: VALID
+
+Test case: 106
+Input: 50 30 40
+Expected: VALID
+C++: VALID
+Python: VALID
+
+Test case: 107
+Input: 2.35 1.23 2.03
+Expected: VALID
+C++: VALID
+Python: VALID
+
+Test case: 108
+Input: 1.23 2.03 2.35
+Expected: VALID
+C++: VALID
+Python: VALID
+
+Test case: 109
+Input: 2.03 2.35 1.23
+Expected: VALID
+C++: VALID
+Python: VALID
+
+============================================================
+Group 2:
+One of the sides is exactly the same length as sum of other 2
+============================================================
+
+Test case: 201
+Input: 1 2 3
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 202
+Input: 2 3 1
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 203
+Input: 3 1 2
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 204
+Input: 0.1 0.2 0.3
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 205
+Input: 0.2 0.3 0.1
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 206
+Input: 0.3 0.1 0.2
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 207
+Input: 37 125 162
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 208
+Input: 125 162 37
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 209
+Input: 162 37 125
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+============================================================
+Group 3:
+Some of the sides are invalid
+============================================================
+
+Test case: 301
+Input: -4 5 6
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 302
+Input: 5 6 -4
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 303
+Input: 6 -4 5
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 304
+Input: 4 5 -6
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 305
+Input: 5 -6 4
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 306
+Input: -6 4 5
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 307
+Input: 4 -5 -6
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 308
+Input: -5 -6 4
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 309
+Input: -6 4 -5
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 310
+Input: 4 5 0
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 311
+Input: 5 0 4
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 312
+Input: 0 4 5
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 313
+Input: 4 -5 0
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 314
+Input: -5 0 4
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+Test case: 315
+Input: 0 4 -5
+Expected: INVALID
+C++: INVALID
+Python: INVALID
+
+============================================================
+Group 4:
+Invalid input in various prompts
+============================================================
+
+Test case: 401
+C++ log:
+    Please enter side length a.
+    12
+    Please enter side length b.
+    53
+    Please enter side length c.
+    34
+    Triangle doesn't exist.
+    Continue? (Y/N)
+    ddf;lgkj  
+    Invalid format. Accepted values for YES are 'Y', '1' or 'T'. Accepted values for NO are 'N', '0' or 'F'. Please try again.
+    0
+    <program terminates>
+Python log:
+    Please enter side length a.
+    12
+    Please enter side length b.
+    53
+    Please enter side length c.
+    34
+    Triangle doesn't exist.
+    Continue? (Y/N)
+    ddf;lgkj
+    Invalid format. Accepted values for YES are 'Y', '1' or 'T'. Accepted values for NO are 'N', '0' or 'F'. Please try again.
+    0
+    <program terminates>
+Works as expected: program re-prompts user on invalid Y/N input.
+
+
+Test case: 402
+C++ log:
+    Please enter side length a.
+    -123
+    Length must be positive, please try again.
+    0
+    Length must be positive, please try again.
+    123
+    Please enter side length b.
+    <rest of log not relevant>
+Python log:
+    Please enter side length a.
+    -123
+    Invalid value. Please input a positive real number.
+    0
+    Invalid value. Please input a positive real number.
+    123
+    Please enter side length b.
+    <rest of log not relevant>
+Works as expected: program re-prompts user on invalid length value.
+
