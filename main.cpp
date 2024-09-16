@@ -136,12 +136,10 @@ int main() {
 
 // This version of main contains full user I/O along with error handling.
 int main() {
-    bool do_another;
     do {
         calculation();
         std::cout << "Continue? (Y/N)" << std::endl;
-        do_another = get_input_bool();
-    } while (do_another);
+    } while (get_input_bool());
 }
 
 #endif
